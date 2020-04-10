@@ -20,6 +20,7 @@
     {% include_cached masthead.html %}
 
     <div class="initial-content">
+      {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
       {{ content }}
     </div>
 
